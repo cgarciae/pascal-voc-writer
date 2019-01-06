@@ -19,9 +19,9 @@ Use
     writer = Writer('path/to/img.jpg', 800, 400)
 
 
-    # ::addObject(name, xmin, ymin, xmax, ymax)
+    # ::add_object(name, xmin, ymin, xmax, ymax)
 
-    writer.addObject('cat', 100, 100, 200, 200)
+    writer.add_object('cat', 100, 100, 200, 200)
 
 
     # ::save(path)

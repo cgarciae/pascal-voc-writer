@@ -21,7 +21,7 @@ class Writer:
             'objects': []
         }
 
-    def addObject(self, name, xmin, ymin, xmax, ymax, pose='Unspecified', truncated=0, difficult=0):
+    def add_object(self, name, xmin, ymin, xmax, ymax, pose='Unspecified', truncated=0, difficult=0):
         self.template_parameters['objects'].append({
             'name': name,
             'xmin': xmin,
