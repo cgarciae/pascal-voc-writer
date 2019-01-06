@@ -11,7 +11,8 @@
         <depth>{{ depth }}</depth>
     </size>
     <segmented>{{ segmented }}</segmented>
-{% for object in objects %}    <object>
+    {% for object in objects %}    
+    <object>
         <name>{{ object.name }}</name>
         <pose>{{ object.pose }}</pose>
         <truncated>{{ object.truncated }}</truncated>
@@ -22,5 +23,6 @@
             <xmax>{{ object.xmax }}</xmax>
             <ymax>{{ object.ymax }}</ymax>
         </bndbox>
-    </object>{% endfor %}
+    </object>
+    {% endfor %}
 </annotation>

@@ -1,4 +1,4 @@
-PASCAL VOC Writer
+PASCAL VOC PascalVoc
 =================
 
 This library can be used to create image annotation XML files in the PASCAL VOC
@@ -7,23 +7,32 @@ file format.
 Install
 -------
 
-``pip install pascal-voc-writer``
+``pip install pascal-voc-pv``
 
 Use
 ---
 
-    from pascal_voc_writer import Writer
+    from pascal_voc_writer import PascalVoc
 
-    # Writer(path, width, height)
+    # PascalVoc(path, width, height)
 
-    writer = Writer('path/to/img.jpg', 800, 400)
+    pv = PascalVoc('path/to/img.jpg', 800, 400)
 
 
     # ::add_object(name, xmin, ymin, xmax, ymax)
 
-    writer.add_object('cat', 100, 100, 200, 200)
-
+    pv.add_object('cat', 100, 100, 200, 200)
 
     # ::save(path)
 
-    writer.save('path/to/img.xml')
+    pv.save('path/to/img.xml')
+
+    # ::metadata
+
+    metadata: dict = pv.metadata
+
+    # ::xml_string
+
+    xml: str = pv.xml_string
+
+    
