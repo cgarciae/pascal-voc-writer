@@ -2,7 +2,7 @@ import os
 from jinja2 import Environment, PackageLoader
 
 
-class PascalVoc:
+class PascalVocWritter:
     def __init__(self, path, width, height, depth=3, database='Unknown', segmented=0):
         environment = Environment(loader=PackageLoader('pascal_voc_writer', 'templates'), keep_trailing_newline=True)
         self.annotation_template = environment.get_template('annotation.xml')
@@ -35,7 +35,7 @@ class PascalVoc:
 
     @property
     def xml_string(self):
-        return self.annotation_template.xml_string(**self.metadata)
+        return self.annotation_template.render(**self.metadata)
 
     def save(self, annotation_path):
         with open(annotation_path, 'w') as file:

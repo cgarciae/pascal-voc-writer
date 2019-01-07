@@ -1,4 +1,4 @@
-PASCAL VOC PascalVoc
+PASCAL VOC PascalVocWritter
 =================
 
 This library can be used to create image annotation XML files in the PASCAL VOC
@@ -12,11 +12,11 @@ Install
 Use
 ---
 
-    from pascal_voc_writer import PascalVoc
+    from pascal_voc_writer import PascalVocWritter
 
-    # PascalVoc(path, width, height)
+    # PascalVocWritter(path, width, height)
 
-    pv = PascalVoc('path/to/img.jpg', 800, 400)
+    pv = PascalVocWritter('path/to/img.jpg', 800, 400)
 
 
     # ::add_object(name, xmin, ymin, xmax, ymax)
